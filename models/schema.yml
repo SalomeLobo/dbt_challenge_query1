@@ -8,6 +8,9 @@ sources:
       - name: sales
         identifier: raw_gz_sales
         description: greenweez raw sales data source
+        tests:
+              - unique:
+                  column_name: "(orders_id || '-' || products_id)"
       - name: product
         identifier: raw_gz_product
         description: greenweez raw product data source
