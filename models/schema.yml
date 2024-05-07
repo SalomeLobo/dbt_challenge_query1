@@ -7,10 +7,10 @@ sources:
     tables:
       - name: sales
         identifier: raw_gz_sales
-        description: greenweez raw sales data source
         freshness: 
           warn_after: {count: 90, period: day}
-        loaded_at_field: "CAST date_date as TIMESTAMP"
+        loaded_at_field: "CAST (date_date as TIMESTAMP)"
+        description: greenweez raw sales data source
       - name: product
         identifier: raw_gz_product
         description: greenweez raw product data source
