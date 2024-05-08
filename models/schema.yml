@@ -32,6 +32,7 @@ sources:
       - name: adwords
         identifier: raw_gz_adwords 
         description: greenweez raw adwords data source
+
       - name: bing
         identifier: raw_gz_bing
         description: greenweez raw bing data source
@@ -41,3 +42,13 @@ sources:
       - name: facebook
         identifier: raw_gz_facebook
         description: greenweez raw facebook data source
+
+models:
+  - name: stg_raw__adwords
+    description: testing primary key
+    tests:
+      - unique:
+          column_name: "(campaign_key || '_' || date_date)"
+      - not_null:
+          column_name: "(campaign_key || '_' || date_date)"
+              
