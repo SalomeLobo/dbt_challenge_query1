@@ -28,4 +28,16 @@ sources:
             description: primary key of the table
             tests:
               - unique
-              - not_null 
+              - not_null
+      - name: adwords
+        identifier: raw_gz_adwords 
+        description: greenweez raw adwords data source
+      - name: bing
+        identifier: raw_gz_bing
+        description: greenweez raw bing data source
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: greenweez raw criteo data source
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: greenweez raw facebook data source
