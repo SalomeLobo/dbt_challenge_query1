@@ -51,4 +51,16 @@ models:
           column_name: "(campaign_key || '_' || date_date)"
       - not_null:
           column_name: "(campaign_key || '_' || date_date)"
+  - name: finance_campaigns_day
+    description: global kpi
+    columns:
+      - name: ads_margin
+        description: operational_margin - ads_cost
+      - name: average_basket
+        description: average basket cost for each day 
+    tests:
+      - not_null:
+          column_name:
+            - ads_margin
+            - average_basket
               
